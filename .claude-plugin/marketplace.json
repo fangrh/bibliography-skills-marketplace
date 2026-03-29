@@ -2,6 +2,19 @@
   "name": "bibliography-skills-marketplace",
   "version": "1.0.0",
   "description": "Bibliography skills marketplace for Claude Code",
-  "author": "fangrh",
-  "repository": "fangrh/bibliography-skills-marketplace"
+  "owner": {
+    "name": "fangrh",
+    "url": "https://github.com/fangrh"
+  },
+  "plugins": [
+    {
+      "name": "bibliography-skills",
+      "version": "1.0.0",
+      "description": "Zotero-like bibliography extraction and management for Claude Code",
+      "repository": "fangrh/bibliography-skills",
+      "author": "fangrh",
+      "categories": ["bibliography", "latex", "academic"],
+      "commands": ["bib-extractor", "bib-preview", "bib-search"]
+    }
+  ]
 }
