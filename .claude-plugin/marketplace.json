@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Bibliography extraction and management tools for Claude Code",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -16,7 +16,7 @@
         "url": "https://github.com/fangrh/bibliography-skills.git"
       },
       "description": "Zotero-like bibliography extraction and management: extract BibTeX from DOIs/URLs, generate LaTeX previews, search academic papers",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "strict": true
     }
   ]
