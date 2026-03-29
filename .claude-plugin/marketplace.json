@@ -1,21 +1,23 @@
 {
   "name": "bibliography-skills-marketplace",
-  "version": "1.0.0",
-  "description": "Bibliography skills marketplace for Claude Code",
   "owner": {
     "name": "fangrh",
-    "url": "https://github.com/fangrh"
+    "email": "fangrh@users.noreply.github.com"
+  },
+  "metadata": {
+    "description": "Bibliography extraction and management tools for Claude Code",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "bibliography-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/fangrh/bibliography-skills.git"
+      },
+      "description": "Zotero-like bibliography extraction and management: extract BibTeX from DOIs/URLs, generate LaTeX previews, search academic papers",
       "version": "1.0.0",
-      "description": "Zotero-like bibliography extraction and management for Claude Code",
-      "repository": "fangrh/bibliography-skills",
-      "author": {
-        "name": "fangrh",
-        "url": "https://github.com/fangrh"
-      }
+      "strict": true
     }
   ]
 }
