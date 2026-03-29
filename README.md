@@ -1,56 +1,78 @@
 # Bibliography Skills Marketplace
 
-Curated bibliography extraction and management tools for Claude Code.
+A curated marketplace for bibliography extraction and management tools for Claude Code.
 
 ## Installation
 
-Add this marketplace to Claude Code:
+### Add Marketplace
 
 ```bash
 /plugin marketplace add fangrh/bibliography-skills-marketplace
 ```
 
-## Available Plugins
+### Install Plugin
 
-### Bibliography Skills (Core)
-
-**Description:** Zotero-like bibliography extraction and management suite with DOI/URL extraction, LaTeX preview generation, and AI-powered citation suggestions.
-
-**Categories:** Bibliography, LaTeX, Academic Writing
-
-**Install:**
 ```bash
 /plugin install bibliography-skills@fangrh-bibliography-skills-marketplace
 ```
 
-**What you get:**
-- `/bib-extractor` - Extract BibTeX from DOIs, URLs, PMIDs, arXiv IDs
-- `/bib-preview` - Generate LaTeX previews with numbered references, notes, abstracts, and AI suggestions
-- `/bib-search` - Search and extract bibliography from web
-- `bib_extractor.py` - Python script for batch processing
-- Full LaTeX formatting with hyperlinks for DOI/URL
-- AI-powered citation sentence suggestions (optional)
+## Available Plugins
+
+### Bibliography Skills
+
+Zotero-like bibliography extraction and management for Claude Code.
+
+**Features:**
+- Extract BibTeX from DOIs, URLs, PMIDs, arXiv IDs
+- Generate LaTeX previews with numbered references, hyperlinks, notes, abstracts
+- Search and extract bibliography from web
+- Auto-generated citation keys
+- AI-powered citation suggestions
+- Support for Science magazine e-locators
+
+**Commands:**
+- `/bib-extractor` - Extract BibTeX from identifiers
+- `/bib-preview` - Generate LaTeX preview
+- `/bib-search` - Search and extract from web
 
 **Repository:** https://github.com/fangrh/bibliography-skills
 
----
+## Usage Examples
 
-## Marketplace Structure
+### Extract from DOI
 
-The marketplace contains a README.md that lists all available packages. Each package is hosted in its own GitHub repository.
+```bash
+/bib-extractor 10.1038/s41586-021-03926-0
+```
 
-## Adding a Package
+### Extract from URL
 
-To add a new package to this marketplace:
+```bash
+/bib-extractor https://www.nature.com/articles/s41586-021-03926-0
+```
 
-1. Create a GitHub repository for your package (e.g., `yourusername/package-name`)
-2. Add `.claude-plugin` file to identify it as a Claude Code plugin
-3. Add `package.json` with package metadata
-4. Add your commands to `commands/` directory
-5. Add your skills to `skills/` directory
-6. Update this README.md with package description
-7. Reference your package repository
+### Batch extraction
 
-## Plugin Development
+```bash
+/bib-extractor --input dois.txt --output references.bib
+```
 
-See [Claude Code Documentation](https://docs.anthropic.com) for more information on plugin development.
+### Generate LaTeX preview
+
+```bash
+/bib-preview references.bib
+```
+
+### Search for papers
+
+```bash
+/bib-search "quantum computing" --limit 5
+```
+
+## License
+
+MIT License
+
+## Author
+
+fangrh (https://github.com/fangrh)
